@@ -1,0 +1,31 @@
+import { createStart, createMiddleware } from "@tanstack/react-start";
+
+import { renderErrorPage } from "./lib/error-page";
+
+// Deja pasar /api/* y /media/* al proxy de Vite sin que el SSR los intercepte
+const passthroughApiMiddleware = createMiddleware().server(async ({ next, request }) => {
+  const url = new URL(request.url);
+  if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/media/")) {
+    return new Response("Not handled by SSR", { status: 404 });
+  }
+  return next();
+});
+
+const errorMiddleware = createMiddleware().server(async ({ next }) => {
+  try {
+    return await next();
+  } catch (error) {
+    if (error != null && typeof error === "object" && "statusCode" in error) {
+      throw error;
+    }
+    console.error(error);
+    return new Response(renderErrorPage(), {
+      status: 500,
+      headers: { "content-type": "text/html; charset=utf-8" },
+    });
+  }
+});
+
+export const startInstance = createStart(() => ({
+  requestMiddleware: [passthroughApiMiddleware, errorMiddleware],
+}));

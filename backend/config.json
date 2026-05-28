@@ -1,0 +1,40 @@
+{
+  "flows": [
+    {
+      "id": "flow-0",
+      "name": "Demo texto",
+      "keywords": [
+        {
+          "text": "demo",
+          "matchType": "exact"
+        },
+        {
+          "text": "prueba",
+          "matchType": "exact"
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-0-0",
+          "type": "text",
+          "content": "Hola, esto es una respuesta de prueba",
+          "caption": "",
+          "delayMin": 1000,
+          "delayMax": 2000,
+          "simulateTyping": true,
+          "simulateRecording": false
+        },
+        {
+          "id": "x0xo08x8",
+          "type": "document",
+          "content": "/media/documentos/CATALOGO EJPERFUMES 2026.pdf",
+          "caption": "descripcion de prueba ",
+          "delayMin": 4000,
+          "delayMax": 6000,
+          "simulateTyping": true,
+          "simulateRecording": false
+        }
+      ]
+    }
+  ]
+}
