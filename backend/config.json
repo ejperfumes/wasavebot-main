@@ -1,40 +1,180 @@
 {
-  "flows": [
+  "quickReplies": [
     {
-      "id": "flow-0",
-      "name": "Demo texto",
-      "keywords": [
+      "id": "3thlngrl",
+      "name": "PROMOCION 65.9K",
+      "color": "#f59e0b",
+      "editBeforeSend": false,
+      "steps": [
         {
-          "text": "demo",
-          "matchType": "exact"
+          "id": "xdyyn5qu",
+          "type": "text",
+          "content": "Hola, ¿Cómo te va? 😊 Gracias por escribirnos. 🙏\n\nya te envió toda la información de esta promoción. ✨ Dame un momento mientras te grabo un audio. 🎤",
+          "caption": "",
+          "delayMin": 8,
+          "delayMax": 10,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "TEXTO "
         },
         {
-          "text": "prueba",
-          "matchType": "exact"
+          "id": "ppszdzbd",
+          "type": "audio",
+          "content": "/media/audios/PROMOCION 65.9K (1).ogg",
+          "caption": "",
+          "delayMin": 38,
+          "delayMax": 39,
+          "simulateTyping": false,
+          "simulateRecording": true,
+          "title": "AUDIO 1"
+        },
+        {
+          "id": "potp8aqp",
+          "type": "image",
+          "content": "/media/imagenes/4perfumes-30ml.png",
+          "caption": "👆 La presentación de los frascos es tal cual como se muestra en esta imagen.\n*💫(CALIDAD Y DURABILIDAD GARANTIZADA)💫*  \nYa te voy a enviar un audio donde te explicaré mejor la promoción y cómo puedes escoger las fragancias que más te gusten ✨  \nRegálame un momento por favor",
+          "delayMin": 20,
+          "delayMax": 25,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "IMAGEN PRESENTACION CAPTION"
+        },
+        {
+          "id": "wyvmxlcy",
+          "type": "audio",
+          "content": "/media/audios/PROMOCION 65.9K (2).ogg",
+          "caption": "",
+          "delayMin": 57,
+          "delayMax": 59,
+          "simulateTyping": false,
+          "simulateRecording": true,
+          "title": "AUDIO 2"
+        },
+        {
+          "id": "3vowd2b6",
+          "type": "document",
+          "content": "/media/documentos/CATALOGO EJPERFUMES 2026.pdf",
+          "caption": "📖 👆 aqui te envio nuestro *CATALOGO ACTUALIZADO EJPERFUMES.*\n(si no puedes descargar el catalogo solo dime y te envió el link para que ingreses directamente.) \n\n",
+          "delayMin": 8,
+          "delayMax": 10,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "CATALOGO "
+        },
+        {
+          "id": "lzdczy0p",
+          "type": "text",
+          "content": "Manejamos un catálogo con más de 300 inspiraciones entre perfumes *Diseñador, Nicho y Árabes* \n✨ *Si aún no sabes cuales fragancias elegir, no te preocupes 😊 Podemos ayudarte recomendándote opciones según el estilo de aroma que normalmente te gusta usar.* \n_La idea es que encuentres fragancias que realmente vayan contigo y con tu personalidad_  🔥 \n\n 🙂 Quedo muy atento para ayudarte y responder cualquier duda o pregunta que tengas.",
+          "caption": "",
+          "delayMin": 10,
+          "delayMax": 12,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "MENSAJE DE CIERRE "
+        }
+      ]
+    },
+    {
+      "id": "8rfg74go",
+      "name": "PROMOCION 55.9K",
+      "color": "#ef4444",
+      "editBeforeSend": false,
+      "steps": [
+        {
+          "id": "x0eocf5h",
+          "type": "text",
+          "content": "Hola, ¿Cómo te va? 😊 Gracias por escribirnos. 🙏\n\nya te envió toda la información de esta promoción. ✨ Dame un momento mientras te grabo un audio. 🎤",
+          "caption": "",
+          "delayMin": 8,
+          "delayMax": 10,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "TEXTO"
+        },
+        {
+          "id": "0uv8hql0",
+          "type": "audio",
+          "content": "/media/audios/PROMOCION 55.9K (1).ogg",
+          "caption": "",
+          "delayMin": 47,
+          "delayMax": 48,
+          "simulateTyping": false,
+          "simulateRecording": true,
+          "title": "AUDIO 1"
+        },
+        {
+          "id": "7zd9tu18",
+          "type": "image",
+          "content": "/media/imagenes/PROMOCION CLASICA 4 PERUMES.png",
+          "caption": "👆 La presentación de los frascos es tal cual como se muestra en esta imagen.\n*💫(CALIDAD Y DURABILIDAD GARANTIZADA)💫*  \nYa te voy a enviar un audio donde te explicaré mejor la promoción y cómo puedes escoger las fragancias que más te gusten ✨  \nRegálame un momento por favor",
+          "delayMin": 20,
+          "delayMax": 22,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "IMAGEN DE PRESENTACION CAPTION"
+        },
+        {
+          "id": "1sprtfp8",
+          "type": "audio",
+          "content": "/media/audios/PROMOCION 55.9K (2).ogg",
+          "caption": "",
+          "delayMin": 44,
+          "delayMax": 45,
+          "simulateTyping": false,
+          "simulateRecording": true,
+          "title": "AUDIO 2 "
+        },
+        {
+          "id": "1edc9qqu",
+          "type": "document",
+          "content": "/media/documentos/CATALOGO EJPERFUMES 2026.pdf",
+          "caption": "📖 👆 aqui te envio nuestro *CATALOGO ACTUALIZADO EJPERFUMES.*\n\n(si no puedes descargar el catalogo solo dime y te envió el link para que ingreses directamente.) \n",
+          "delayMin": 8,
+          "delayMax": 10,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "CATALOGO "
+        },
+        {
+          "id": "hvx242sv",
+          "type": "text",
+          "content": "Manejamos un catálogo con más de 300 inspiraciones entre perfumes *Diseñador, Nicho y Árabes* \n✨ *Si aún no sabes cuales fragancias elegir, no te preocupes 😊 Podemos ayudarte recomendándote opciones según el estilo de aroma que normalmente te gusta usar.* \n_La idea es que encuentres fragancias que realmente vayan contigo y con tu personalidad_  🔥 \n\n 🙂 Quedo muy atento para ayudarte y responder cualquier duda o pregunta que tengas.",
+          "caption": "",
+          "delayMin": 10,
+          "delayMax": 12,
+          "simulateTyping": true,
+          "simulateRecording": false,
+          "title": "MENSAJE DE CIERRE"
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "id": "gh8tp6vc",
+      "name": "test",
+      "keywords": [
+        {
+          "text": "SASAS",
+          "matchType": "contains"
         }
       ],
       "steps": [
         {
           "id": "step-0-0",
           "type": "text",
-          "content": "Hola, esto es una respuesta de prueba",
+          "content": "SASA",
           "caption": "",
-          "delayMin": 1000,
-          "delayMax": 2000,
+          "delayMin": 8,
+          "delayMax": 10,
           "simulateTyping": true,
-          "simulateRecording": false
-        },
-        {
-          "id": "x0xo08x8",
-          "type": "document",
-          "content": "/media/documentos/CATALOGO EJPERFUMES 2026.pdf",
-          "caption": "descripcion de prueba ",
-          "delayMin": 4000,
-          "delayMax": 6000,
-          "simulateTyping": true,
-          "simulateRecording": false
+          "simulateRecording": false,
+          "title": ""
         }
-      ]
+      ],
+      "initialDelayMin": 0,
+      "initialDelayMax": 0,
+      "schedules": []
     }
   ]
 }

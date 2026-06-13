@@ -11,7 +11,7 @@ interface Props {
   open: boolean;
   onOpenChange: (v: boolean) => void;
   onPick: (item: MediaItem) => void;
-  filter?: MediaItem["type"];
+  filter?: string; // puede ser "image", "video", "audio", "document" o "image,video"
 }
 
 const ICONS = {
@@ -24,8 +24,12 @@ const ICONS = {
 export function MediaPickerDialog({ open, onOpenChange, onPick, filter }: Props) {
   const [items, setItems]     = useState<MediaItem[]>([]);
   const [loading, setLoading] = useState(false);
-  const [tab, setTab]         = useState<MediaItem["type"]>(filter ?? "image");
+  const [tab, setTab]         = useState<MediaItem["type"]>("image");
   const [query, setQuery]     = useState("");
+
+  // Determinar si el filtro es múltiple (contiene coma)
+  const isMultiFilter = filter?.includes(",") ?? false;
+  const multiFilterTypes = isMultiFilter ? filter!.split(",").map(t => t.trim() as MediaItem["type"]) : [];
 
   useEffect(() => {
     if (!open) return;
@@ -38,8 +42,8 @@ export function MediaPickerDialog({ open, onOpenChange, onPick, filter }: Props)
   }, [open]);
 
   useEffect(() => {
-    if (filter) setTab(filter);
-  }, [filter, open]);
+    if (filter && !isMultiFilter) setTab(filter as MediaItem["type"]);
+  }, [filter, open, isMultiFilter]);
 
   const grouped = useMemo(() => {
     const q = query.toLowerCase();
@@ -51,6 +55,12 @@ export function MediaPickerDialog({ open, onOpenChange, onPick, filter }: Props)
       document: filtered.filter((i) => i.type === "document"),
     };
   }, [items, query]);
+
+  // Si hay filtro múltiple, combinar los tipos solicitados en un solo array
+  const multiItems = useMemo(() => {
+    if (!isMultiFilter) return [];
+    return multiFilterTypes.flatMap(type => grouped[type] || []);
+  }, [isMultiFilter, multiFilterTypes, grouped]);
 
   const renderGrid = (list: MediaItem[]) => {
     if (loading) {
@@ -111,18 +121,25 @@ export function MediaPickerDialog({ open, onOpenChange, onPick, filter }: Props)
           onChange={(e) => setQuery(e.target.value)}
           className="mb-2"
         />
-        <Tabs value={tab} onValueChange={(v) => setTab(v as MediaItem["type"])}>
-          <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="image">Imágenes ({grouped.image.length})</TabsTrigger>
-            <TabsTrigger value="video">Videos ({grouped.video.length})</TabsTrigger>
-            <TabsTrigger value="audio">Audios ({grouped.audio.length})</TabsTrigger>
-            <TabsTrigger value="document">Docs ({grouped.document.length})</TabsTrigger>
-          </TabsList>
-          <TabsContent value="image"    className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.image)}</TabsContent>
-          <TabsContent value="video"    className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.video)}</TabsContent>
-          <TabsContent value="audio"    className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.audio)}</TabsContent>
-          <TabsContent value="document" className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.document)}</TabsContent>
-        </Tabs>
+        {isMultiFilter ? (
+          // Vista sin pestañas, muestra los tipos combinados
+          <div className="mt-4 max-h-[55vh] overflow-y-auto">
+            {renderGrid(multiItems)}
+          </div>
+        ) : (
+          <Tabs value={tab} onValueChange={(v) => setTab(v as MediaItem["type"])}>
+            <TabsList className="grid w-full grid-cols-4">
+              <TabsTrigger value="image">Imágenes ({grouped.image.length})</TabsTrigger>
+              <TabsTrigger value="video">Videos ({grouped.video.length})</TabsTrigger>
+              <TabsTrigger value="audio">Audios ({grouped.audio.length})</TabsTrigger>
+              <TabsTrigger value="document">Docs ({grouped.document.length})</TabsTrigger>
+            </TabsList>
+            <TabsContent value="image"    className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.image)}</TabsContent>
+            <TabsContent value="video"    className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.video)}</TabsContent>
+            <TabsContent value="audio"    className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.audio)}</TabsContent>
+            <TabsContent value="document" className="mt-4 max-h-[55vh] overflow-y-auto">{renderGrid(grouped.document)}</TabsContent>
+          </Tabs>
+        )}
         <div className="flex justify-end pt-2">
           <Button variant="outline" onClick={() => onOpenChange(false)}>
             Cerrar

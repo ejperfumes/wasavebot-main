@@ -1,0 +1,6 @@
+2026/06/13-06:52:13.668 3504 Reusing MANIFEST C:\Users\User\Desktop\wasavebot-main\backend\wppconnect_tokens\wasavebot-cuenta2\Default\Local Storage\leveldb/MANIFEST-000001
+2026/06/13-06:52:13.683 3504 Recovering log #33
+2026/06/13-06:52:13.690 3504 Reusing old log C:\Users\User\Desktop\wasavebot-main\backend\wppconnect_tokens\wasavebot-cuenta2\Default\Local Storage\leveldb/000033.log 
+2026/06/13-06:53:13.733 3544 Level-0 table #35: started
+2026/06/13-06:53:13.742 3544 Level-0 table #35: 14035 bytes OK
+2026/06/13-06:53:13.830 3544 Delete type=0 #33

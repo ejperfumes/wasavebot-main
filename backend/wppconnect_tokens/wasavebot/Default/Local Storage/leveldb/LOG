@@ -1,0 +1,42 @@
+2026/06/13-06:52:06.098 558 Reusing MANIFEST C:\Users\User\Desktop\wasavebot-main\backend\wppconnect_tokens\wasavebot\Default\Local Storage\leveldb/MANIFEST-000001
+2026/06/13-06:52:06.117 558 Recovering log #1461
+2026/06/13-06:52:06.128 558 Reusing old log C:\Users\User\Desktop\wasavebot-main\backend\wppconnect_tokens\wasavebot\Default\Local Storage\leveldb/001461.log 
+2026/06/13-06:53:06.170 558 Level-0 table #1465: started
+2026/06/13-06:53:06.182 558 Level-0 table #1465: 65046 bytes OK
+2026/06/13-06:53:06.185 558 Delete type=0 #1461
+2026/06/13-07:08:06.866 2bbc Level-0 table #1467: started
+2026/06/13-07:08:06.880 2bbc Level-0 table #1467: 64530 bytes OK
+2026/06/13-07:08:06.883 2bbc Delete type=0 #1464
+2026/06/13-07:09:06.861 2bbc Level-0 table #1469: started
+2026/06/13-07:09:06.868 2bbc Level-0 table #1469: 63033 bytes OK
+2026/06/13-07:09:06.871 2bbc Delete type=0 #1466
+2026/06/13-07:09:06.871 2bbc Compacting 4@0 + 1@1 files
+2026/06/13-07:09:06.880 2bbc Generated table #1470@0: 933 keys, 101760 bytes
+2026/06/13-07:09:06.880 2bbc Compacted 4@0 + 1@1 files => 101760 bytes
+2026/06/13-07:09:06.881 2bbc compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/13-07:09:06.883 2bbc Delete type=2 #1460
+2026/06/13-07:09:06.883 2bbc Delete type=2 #1462
+2026/06/13-07:09:06.883 2bbc Delete type=2 #1465
+2026/06/13-07:09:06.883 2bbc Delete type=2 #1467
+2026/06/13-07:09:06.883 2bbc Delete type=2 #1469
+2026/06/13-07:10:06.928 2bbc Level-0 table #1472: started
+2026/06/13-07:10:06.944 2bbc Level-0 table #1472: 62014 bytes OK
+2026/06/13-07:10:07.054 2bbc Delete type=0 #1468
+2026/06/13-07:11:06.858 2bbc Level-0 table #1474: started
+2026/06/13-07:11:06.864 2bbc Level-0 table #1474: 62015 bytes OK
+2026/06/13-07:11:06.866 2bbc Delete type=0 #1471
+2026/06/13-07:24:06.864 2bbc Level-0 table #1476: started
+2026/06/13-07:24:06.871 2bbc Level-0 table #1476: 64008 bytes OK
+2026/06/13-07:24:06.873 2bbc Delete type=0 #1473
+2026/06/13-07:57:06.875 558 Level-0 table #1478: started
+2026/06/13-07:57:06.891 558 Level-0 table #1478: 65156 bytes OK
+2026/06/13-07:57:06.893 558 Delete type=0 #1475
+2026/06/13-07:57:06.895 558 Compacting 4@0 + 1@1 files
+2026/06/13-07:57:06.913 558 Generated table #1479@0: 934 keys, 101685 bytes
+2026/06/13-07:57:06.913 558 Compacted 4@0 + 1@1 files => 101685 bytes
+2026/06/13-07:57:06.914 558 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/13-07:57:06.915 558 Delete type=2 #1470
+2026/06/13-07:57:06.915 558 Delete type=2 #1472
+2026/06/13-07:57:06.915 558 Delete type=2 #1474
+2026/06/13-07:57:06.915 558 Delete type=2 #1476
+2026/06/13-07:57:06.915 558 Delete type=2 #1478
