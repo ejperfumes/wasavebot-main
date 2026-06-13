@@ -1,8 +1,0 @@
-node_modules/
-tokens/
-*.session
-.env
-.env.*
-*-history*.json
-contacts*.json
-connection-name*.json
